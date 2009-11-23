@@ -1,0 +1,6 @@
+Adds index option to active record finds:
+
+  Lamp.find(:all, :index => 'index_lamps_on_name', :conditions => {:name => 'ryan'})
+
+Have to use a string since figuring out what index to use (unique or not)
+is not deterministic.
